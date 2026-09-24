@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#F5F8FA" android:paddingTop="32dp">
+    <ScrollView android:id="@+id/rootScroll" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/header_background" android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AcquaChiara" android:textColor="@android:color/white" android:textSize="30sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="La tua acqua, spiegata con semplicità" android:textColor="#D9F2FA" android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/accessPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/card_background" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Accedi alle tue bollette" android:textColor="@color/water_blue_dark" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Inserisci il codice di 6 cifre. Per la demo usa 123456." android:textColor="#41565E" android:textSize="16sp" />
+                <EditText android:id="@+id/accessCodeInput" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="14dp" android:hint="Codice a 6 cifre" android:inputType="number" android:maxLength="6" android:textSize="20sp" />
+                <Button android:id="@+id/accessButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="10dp" android:background="@drawable/button_primary" android:text="ACCEDI" android:textColor="@android:color/white" android:textSize="16sp" />
+                <TextView android:id="@+id/accessError" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="#B3261E" android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/appPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                <Button android:id="@+id/profileButton" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="14dp" android:text="👤  Paolo Rossi  ·  Profilo e utenza" android:textAlignment="viewStart" android:textColor="@color/water_blue_dark" android:textSize="16sp" />
+                <LinearLayout android:id="@+id/homePanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:background="@drawable/card_background" android:orientation="vertical">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="🏠 La tua ultima bolletta" android:textColor="@color/water_blue_dark" android:textSize="24sp" android:textStyle="bold" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Gennaio 2025  ·  Utenza Paolo Rossi" android:textColor="#60747B" android:textSize="16sp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="🟡  Consumo nella norma" android:textColor="#9A6700" android:textSize="20sp" android:textStyle="bold" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="14 m³ questo mese · media: 15 m³&#10;Hai consumato meno della tua media." android:textColor="#41565E" android:textSize="17sp" android:lineSpacingExtra="4dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Totale da pagare" android:textColor="#60747B" android:textSize="15sp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="38,71 €" android:textColor="@color/water_blue_dark" android:textSize="32sp" android:textStyle="bold" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Acquedotto 6,68 €  ·  Fognatura 4,14 €&#10;Depurazione 11,71 €  ·  Quota fissa 11,00 €" android:textColor="#41565E" android:textSize="16sp" android:lineSpacingExtra="4dp" />
+                    <Button android:id="@+id/homeExplainButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="16dp" android:background="@drawable/button_primary" android:text="SPIEGAZIONE SEMPLICE" android:textColor="@android:color/white" android:textSize="16sp" />
+                    <Button android:id="@+id/homePdfButton" android:layout_width="match_parent" android:layout_height="50dp" android:text="SCARICA / APRI IL PDF" android:textColor="@color/water_blue_dark" android:textSize="16sp" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/sectionPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/card_background" android:orientation="vertical" android:visibility="gone">
+                    <TextView android:id="@+id/pageTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/water_blue_dark" android:textSize="24sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/pageBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:textColor="#41565E" android:textSize="17sp" android:lineSpacingExtra="5dp" />
+                    <EditText android:id="@+id/chatQuestion" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="14dp" android:hint="Scrivi una domanda, ad esempio: quota fissa" android:textSize="16sp" android:visibility="gone" />
+                    <Button android:id="@+id/chatAskButton" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/button_primary" android:text="CHIEDI AD ACQUACHIARA" android:textColor="@android:color/white" android:textSize="15sp" android:visibility="gone" />
+                    <Button android:id="@+id/primaryAction" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="16dp" android:background="@drawable/button_primary" android:textColor="@android:color/white" android:textSize="16sp" android:visibility="gone" />
+                    <Button android:id="@+id/secondaryAction" android:layout_width="match_parent" android:layout_height="52dp" android:textColor="@color/water_blue_dark" android:textSize="16sp" android:visibility="gone" />
+                    <TextView android:id="@+id/actionNote" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="#60747B" android:textSize="15sp" android:lineSpacingExtra="4dp" />
+                    <Button android:id="@+id/backHomeButton" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="10dp" android:text="TORNA ALLA HOME" android:textColor="@color/water_blue_dark" android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:id="@+id/bottomNavigation" android:layout_width="match_parent" android:layout_height="66dp" android:background="@android:color/white" android:elevation="8dp" android:gravity="center" android:orientation="horizontal" android:paddingStart="8dp" android:paddingEnd="8dp" android:visibility="gone">
+        <Button android:id="@+id/navHome" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="⌂&#10;Home" android:textColor="@color/water_blue_dark" android:textSize="13sp" />
+        <Button android:id="@+id/navArchive" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="🗂&#10;Archivio" android:textColor="@color/water_blue_dark" android:textSize="13sp" />
+        <Button android:id="@+id/navAdvice" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="💡&#10;Consigli" android:textColor="@color/water_blue_dark" android:textSize="13sp" />
+    </LinearLayout>
+</LinearLayout>
